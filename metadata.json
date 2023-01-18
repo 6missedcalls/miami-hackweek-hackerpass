@@ -1,0 +1,25 @@
+{
+  "name": "Hacker Pass | Inner Circle",
+  "description": "The official Hacker Pass for Inner Circle members.",
+  "image": "https://bafybeid5xx3oc4diaajnwpriulxfnfmb3jiwt5wn4j66zafj7lnef3sjsy.ipfs.nftstorage.link/",
+  "animation_url": "https://bafybeid5xx3oc4diaajnwpriulxfnfmb3jiwt5wn4j66zafj7lnef3sjsy.ipfs.nftstorage.link/",
+  "attributes": [
+    {
+      "trait_type": "Membership",
+      "value": "Standard Membership"
+    },
+    {
+      "trait_type": "Property",
+      "value": "Hacker"
+    },
+    {
+      "trait_type": "Event",
+      "value": "Miami Hackweek 2023"
+    },
+    {
+      "display_type": "boost_percentage", 
+      "trait_type": "Network Boost", 
+      "value": 100
+    }
+  ]
+}
