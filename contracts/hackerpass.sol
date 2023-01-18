@@ -33,6 +33,23 @@ contract HackerPass is ERC721, ERC721URIStorage, Ownable {
         _setTokenURI(tokenId, baseURI);
     }
 
+    // questioning life choices
+    function batchMint(address to, uint256 count) public onlyOwner {
+        for (uint256 i = 0; i < count; i++) {
+            safeMint(to);
+        }
+    }
+
+    // check for gas optimizations
+    function airdropTokens(address[] memory recipients, uint256 count)
+        public
+        onlyOwner
+    {
+        for (uint256 i = 0; i < recipients.length; i++) {
+            batchMint(recipients[i], count);
+        }
+    }
+
     function totalSupply() public view returns (uint256) {
         return _tokenIdCounter.current();
     }
