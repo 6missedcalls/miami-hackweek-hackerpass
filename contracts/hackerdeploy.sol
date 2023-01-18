@@ -9,6 +9,8 @@ contract HackerPassDeployer is HackerPassPermissions {
   using Counters for Counters.Counter;
   Counters.Counter private _contractCounter;
 
+  // add enums and events
+
   struct DeployedContractInfo {
     uint256 id;
     address contractAddress;

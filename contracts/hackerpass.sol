@@ -10,7 +10,7 @@ contract HackerPass is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
 
-    string public baseURI;
+    string public mintingURI;
 
     constructor(
         string memory name,
@@ -18,19 +18,15 @@ contract HackerPass is ERC721, ERC721URIStorage, Ownable {
         string memory _mintURI,
         address _owner
     ) ERC721(name, symbol) {
-        baseURI = _mintURI;
+        mintingURI = _mintURI;
         transferOwnership(_owner);
-    }
-
-    function _baseURI() internal view override returns (string memory) {
-        return baseURI;
     }
 
     function safeMint(address to) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
-        _setTokenURI(tokenId, baseURI);
+        _setTokenURI(tokenId, mintingURI);
     }
 
     // questioning life choices
